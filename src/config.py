@@ -19,9 +19,23 @@ SUPABASE_ANON_KEY = get_required("SB_ANON_KEY")
 PINECONE_API_KEY = get_required("PINECONE_API_KEY")
 
 # Optional LLM provider keys
-OPENAI_API_KEY = get_optional("OPENAI_API_KEY")
-CLAUDE_API_KEY = get_optional("CLAUDE_API_KEY")
+GEMINI_API_KEY = get_optional("GEMINI_API_KEY")
+GROQ_API_KEY = get_optional("GROQ_API_KEY")
+OPENROUTER_API_KEY = get_optional("OPENROUTER_API_KEY")
+GEMINI_MODEL = get_optional("GEMINI_MODEL") or "gemini-pro?deploy"  # override at deploy time
 
-# Must have at least 1 LLM provider
-if not (OPENAI_API_KEY or CLAUDE_API_KEY):
-    raise RuntimeError("Either OPENAI_API_KEY or CLAUDE_API_KEY must be set.")
+# Decide provider priority: explicit preference order
+# Uses GEMINI if present, else Groq, else OpenRouter
+ACTIVE_LLM = None
+if GEMINI_API_KEY:
+    ACTIVE_LLM = ("gemini", GEMINI_MODEL, GEMINI_API_KEY)
+elif GROQ_API_KEY:
+    ACTIVE_LLM = ("claude", None, GROQ_API_KEY)
+elif OPENROUTER_API_KEY:
+    ACTIVE_LLM = ("openai", None, OPENROUTER_API_KEY)
+
+if not ACTIVE_LLM:
+    raise RuntimeError("No LLM configured: set GEMINI_API_KEY or GROQ_API_KEY or OPENROUTER_API_KEY")
+
+# Expose for code
+LLM_PROVIDER, LLM_MODEL, LLM_KEY = ACTIVE_LLM
