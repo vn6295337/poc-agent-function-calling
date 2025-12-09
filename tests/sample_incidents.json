@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "description": "Production API service is completely down. All users are unable to access the application. Error logs show database connection timeout. Started approximately 10 minutes ago.",
+    "expected_severity": "critical",
+    "expected_type": "service_outage"
+  },
+  {
+    "id": 2,
+    "description": "Security alert: Unauthorized access detected on admin panel from IP 192.168.1.100. Multiple failed login attempts followed by successful authentication with compromised credentials. Immediate investigation required.",
+    "expected_severity": "critical",
+    "expected_type": "security_breach"
+  },
+  {
+    "id": 3,
+    "description": "Users reporting slow page load times on the main website. Average response time increased from 200ms to 3000ms over the last 30 minutes. CPU utilization at 85% on web servers.",
+    "expected_severity": "high",
+    "expected_type": "performance_degradation"
+  },
+  {
+    "id": 4,
+    "description": "Database backup job failed last night. Error indicates corrupted data in user_profiles table. Approximately 500 records may be affected. Current database is still operational.",
+    "expected_severity": "high",
+    "expected_type": "data_loss"
+  },
+  {
+    "id": 5,
+    "description": "Intermittent network connectivity issues between application servers and database cluster. Packet loss observed at 15%. DNS resolution working normally. Started 1 hour ago.",
+    "expected_severity": "high",
+    "expected_type": "network_issue"
+  },
+  {
+    "id": 6,
+    "description": "Recent deployment to production caused configuration mismatch. Application unable to connect to Redis cache. Error: 'Connection refused on port 6379'. Deployment was 30 minutes ago.",
+    "expected_severity": "high",
+    "expected_type": "configuration_error"
+  },
+  {
+    "id": 7,
+    "description": "Disk space alert: Primary database server disk utilization at 95%. Transaction logs consuming most space. Application still functioning but performance degrading.",
+    "expected_severity": "high",
+    "expected_type": "capacity_issue"
+  },
+  {
+    "id": 8,
+    "description": "Minor UI bug: Submit button on contact form has misaligned text. Functionality works correctly. Only affects visual presentation. No user impact on operations.",
+    "expected_severity": "low",
+    "expected_type": "unknown"
+  },
+  {
+    "id": 9,
+    "description": "Email notification service experiencing delays. Emails being queued but delivery taking 15-20 minutes instead of usual 1-2 minutes. All emails eventually delivered successfully.",
+    "expected_severity": "medium",
+    "expected_type": "performance_degradation"
+  },
+  {
+    "id": 10,
+    "description": "Monitoring system detected unusual spike in API error rate. 500 errors increased from baseline 0.1% to 2.5%. Affecting /api/users endpoint only. Root cause unknown.",
+    "expected_severity": "medium",
+    "expected_type": "unknown"
+  }
+]

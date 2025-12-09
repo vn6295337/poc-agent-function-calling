@@ -1,0 +1,51 @@
+{
+  "functions": [
+    {
+      "name": "extract_incident_details",
+      "description": "Extracts structured information from an incident description including severity level, incident type, affected systems, and key details. This function analyzes the incident text and categorizes it appropriately.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "incident_description": {
+            "type": "string",
+            "description": "The raw incident description or report text to analyze"
+          }
+        },
+        "required": ["incident_description"]
+      }
+    },
+    {
+      "name": "get_standard_mitigation",
+      "description": "Retrieves standard mitigation steps and recommended actions based on the incident type and severity level. Returns a structured response with immediate actions, investigation steps, and escalation criteria.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "incident_type": {
+            "type": "string",
+            "description": "The classified type of incident",
+            "enum": ["service_outage", "security_breach", "performance_degradation", "data_loss", "network_issue", "configuration_error", "capacity_issue", "unknown"]
+          },
+          "severity": {
+            "type": "string",
+            "description": "The severity level of the incident",
+            "enum": ["critical", "high", "medium", "low"]
+          },
+          "affected_systems": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of systems or services affected by the incident"
+          }
+        },
+        "required": ["incident_type", "severity"]
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-12-09",
+    "purpose": "Incident Triage Agent function calling schemas",
+    "compatible_providers": ["openai", "anthropic"]
+  }
+}
