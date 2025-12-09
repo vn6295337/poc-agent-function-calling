@@ -9,6 +9,13 @@ An **autonomous IT incident triage agent** that uses LLM function calling to ext
 
 **Built in 5 days. Proves agent reliability for enterprise IT operations.**
 
+## 🎬 Demo
+
+- **Live Demo**: [https://service-desk-agent.lovable.app](https://service-desk-agent.lovable.app)
+- **Video Demo**: [service_desk_demo.mp4](demos/service_desk_demo.mp4) (30-second walkthrough)
+
+The live demo simulates an IT service desk agent's dashboard with autonomous incident triage, multi-provider failover, and ITSM integration.
+
 ## What This Proves
 
 - **Clean JSON schema definitions** consumed by Gemini, Groq, and OpenRouter function calling APIs
@@ -20,12 +27,12 @@ An **autonomous IT incident triage agent** that uses LLM function calling to ext
 
 **CLI Demo:**
 ```bash
-python agent/cli_agent.py --incident "Production database is down. Users cannot login. Connection timeout on port 5432."
+python src/agent/cli_agent.py --incident "Production database is down. Users cannot login. Connection timeout on port 5432."
 ```
 
 **Web UI:**
 ```bash
-streamlit run ui/app.py
+streamlit run src/ui/app.py
 ```
 
 ## Key Features
@@ -73,45 +80,49 @@ streamlit run ui/app.py
 
 **Single Incident (CLI):**
 ```bash
-python agent/cli_agent.py --incident "API service down - database timeout"
+python src/agent/cli_agent.py --incident "API service down - database timeout"
 ```
 
 **Interactive Mode:**
 ```bash
-python agent/cli_agent.py
+python src/agent/cli_agent.py
 # Enter incident descriptions interactively
 ```
 
 **Batch Mode:**
 ```bash
-python agent/cli_agent.py --mode batch --batch-file tests/sample_incidents.json
+python src/agent/cli_agent.py --mode batch --batch-file tests/sample_incidents.json
 ```
 
 **Web UI (Streamlit):**
 ```bash
-streamlit run ui/app.py
+streamlit run src/ui/app.py
 ```
 
 ## Project Structure
 
 ```
 poc-agent-function-calling/
-├── agent/
-│   ├── core.py              # Main agent loop with function calling orchestration
-│   ├── llm_client.py        # Multi-provider LLM client (Gemini/Groq/OpenRouter)
-│   └── cli_agent.py         # CLI interface
-├── functions/
-│   ├── schemas.json         # Function definitions (OpenAI format)
-│   └── handlers.py          # Function implementations
-├── ui/
-│   └── app.py               # Streamlit web interface
+├── src/                     # Source code
+│   ├── agent/
+│   │   ├── core.py         # Main agent loop with function calling orchestration
+│   │   ├── llm_client.py   # Multi-provider LLM client (Gemini/Groq/OpenRouter)
+│   │   └── cli_agent.py    # CLI interface
+│   ├── functions/
+│   │   ├── schemas.json    # Function definitions (OpenAI format)
+│   │   └── handlers.py     # Function implementations
+│   └── ui/
+│       └── app.py          # Streamlit web interface
+├── demos/                   # Demo artifacts
+│   ├── service_desk_demo.mp4   # Video demo (30s)
+│   └── service_desk_demo.html  # Interactive dashboard demo
 ├── tests/
 │   └── sample_incidents.json # Test data (10 incidents)
 ├── docs/
+│   ├── case_study.md        # Executive summary & portfolio case study
 │   ├── architecture.md      # System design & data flow
 │   ├── implement.md         # Development timeline & decisions
-│   ├── run.md               # Operations guide
-│   └── case_study.md        # Portfolio case study
+│   └── run.md               # Operations guide
 ├── requirements.txt
 ├── .env.example
 └── README.md
@@ -155,12 +166,12 @@ Final Response to User
 
 **Run single incident test:**
 ```bash
-python agent/cli_agent.py --incident "Disk space at 95% on database server" --save
+python src/agent/cli_agent.py --incident "Disk space at 95% on database server" --save
 ```
 
 **Run batch test (10 incidents):**
 ```bash
-python agent/cli_agent.py --mode batch --batch-file tests/sample_incidents.json --output logs
+python src/agent/cli_agent.py --mode batch --batch-file tests/sample_incidents.json --output logs
 ```
 
 **Expected Results:**
@@ -203,8 +214,8 @@ OPENROUTER_MODEL=mistralai/mistral-7b-instruct:free
 ## Common Operations
 
 **Add new incident type:**
-1. Update `incident_type` enum in `functions/schemas.json`
-2. Add playbook in `functions/handlers.py` → `get_standard_mitigation()`
+1. Update `incident_type` enum in `src/functions/schemas.json`
+2. Add playbook in `src/functions/handlers.py` → `get_standard_mitigation()`
 
 **Change LLM provider:**
 ```bash
@@ -251,7 +262,9 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Links
 
+- **Live Demo**: [https://service-desk-agent.lovable.app](https://service-desk-agent.lovable.app)
 - **GitHub**: [https://github.com/vn6295337/poc-agent-function-calling](https://github.com/vn6295337/poc-agent-function-calling)
+- **Video Demo**: [service_desk_demo.mp4](demos/service_desk_demo.mp4)
 - **Author**: Portfolio project demonstrating LLM agent patterns
 
 ---

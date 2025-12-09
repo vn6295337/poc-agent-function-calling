@@ -10,5 +10,7 @@ venv/
 .vscode/
 .idea/
 .DS_Store
+.obsidian/
 # System
 *.log
+logs/
