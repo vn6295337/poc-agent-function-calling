@@ -1,4 +1,4 @@
-# Autonomous IT Incident Triage Agent - Executive Summary
+# IT Service Desk Agent - Executive Summary
 
 ---
 
@@ -71,7 +71,7 @@ Built an **autonomous agent that triages IT incidents in under 5 seconds** using
 
 **Live Demo:** https://service-desk-agent.lovable.app
 **Video Demo:** [service_desk_demo.mp4](../demos/service_desk_demo.mp4)
-**GitHub:** https://github.com/vn6295337/poc-agent-function-calling
+**GitHub:** https://github.com/vn6295337/IT-service-desk-agent
 
 ---
 
@@ -274,7 +274,7 @@ Output: "Incident classification: Critical Service Outage..."
 
 ---
 
-**Project Repository:** https://github.com/vn6295337/poc-agent-function-calling
+**Project Repository:** https://github.com/vn6295337/IT-service-desk-agent
 **Built in:** 5 days (21 hours)
 **Lines of Code:** ~2,000
 **Cost:** $0 (free-tier APIs)

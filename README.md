@@ -1,18 +1,18 @@
-# Incident Triage Agent - Function Calling PoC
+# IT Service Desk Agent - Function Calling PoC
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Elevator Pitch
 
-An **autonomous IT incident triage agent** that uses LLM function calling to extract severity levels, classify incident types, and recommend standard mitigation procedures. Demonstrates production-ready agent patterns with deterministic function execution, structured output validation, and multi-provider LLM fallback (Gemini → Groq → OpenRouter).
+An IT Service Desk Agent that uses LLM function calling to extract severity levels, classify incident types, and recommend standard mitigation procedures. Demonstrates production-ready agent patterns with deterministic function execution, structured output validation, and multi-provider LLM fallback (Gemini → Groq → OpenRouter).
 
 **Built in 5 days. Proves agent reliability for enterprise IT operations.**
 
 ## 🎬 Demo
 
 - **Live Demo**: [https://service-desk-agent.lovable.app](https://service-desk-agent.lovable.app)
-- **Video Demo**: [service_desk_demo.mp4](https://github.com/vn6295337/poc-agent-function-calling/issues/1#issue-3714616144) (30-second walkthrough)
+- **Video Demo**: [service_desk_demo.mp4](https://github.com/vn6295337/IT-service-desk-agent/issues/1#issue-3714616144) (30-second walkthrough)
 
 The live demo simulates an IT service desk agent's dashboard with autonomous incident triage, multi-provider failover, and ITSM integration.
 
@@ -58,7 +58,7 @@ streamlit run src/ui/app.py
 
 1. **Clone repository:**
    ```bash
-   cd /home/vn6295337/poc-agent-function-calling
+   cd /home/vn6295337/IT-service-desk-agent
    ```
 
 2. **Set up environment:**
@@ -102,7 +102,7 @@ streamlit run src/ui/app.py
 ## Project Structure
 
 ```
-poc-agent-function-calling/
+IT-service-desk-agent/
 ├── src/                     # Source code
 │   ├── agent/
 │   │   ├── core.py         # Main agent loop with function calling orchestration
@@ -263,7 +263,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## Links
 
 - **Live Demo**: [https://service-desk-agent.lovable.app](https://service-desk-agent.lovable.app)
-- **GitHub**: [https://github.com/vn6295337/poc-agent-function-calling](https://github.com/vn6295337/poc-agent-function-calling)
+- **GitHub**: [https://github.com/vn6295337/IT-service-desk-agent](https://github.com/vn6295337/IT-service-desk-agent)
 - **Video Demo**: [service_desk_demo.mp4](demos/service_desk_demo.mp4)
 - **Author**: Portfolio project demonstrating LLM agent patterns
 

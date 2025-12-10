@@ -12,7 +12,7 @@
 
 ```bash
 # Navigate to project
-cd /home/vn6295337/poc-agent-function-calling
+cd /home/vn6295337/IT-service-desk-agent
 
 # Activate virtual environment
 source ~/aienv/bin/activate
@@ -288,6 +288,6 @@ cp .env.backup.YYYYMMDD .env
 
 ## Support
 
-- **GitHub Issues:** https://github.com/vn6295337/poc-agent-function-calling/issues
+- **GitHub Issues:** https://github.com/vn6295337/IT-service-desk-agent/issues
 - **Documentation:** See docs/ directory
 - **Logs:** Check triage_result_*.json files

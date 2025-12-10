@@ -2,7 +2,7 @@
 
 ## System Overview
 
-The Incident Triage Agent is an autonomous system that uses LLM function calling to classify IT incidents and recommend mitigation procedures. The architecture prioritizes reliability through multi-provider fallback, deterministic function execution, and structured output validation.
+The IT Service Desk Agent is an autonomous system that uses LLM function calling to classify IT incidents and recommend mitigation procedures. The architecture prioritizes reliability through multi-provider fallback, deterministic function execution, and structured output validation.
 
 ## High-Level Architecture
 

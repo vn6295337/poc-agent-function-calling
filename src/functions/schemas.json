@@ -45,7 +45,7 @@
   "metadata": {
     "version": "1.0",
     "created": "2025-12-09",
-    "purpose": "Incident Triage Agent function calling schemas",
+    "purpose": "IT Service Desk Agent function calling schemas",
     "compatible_providers": ["openai", "anthropic"]
   }
 }

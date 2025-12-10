@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLI interface for the Incident Triage Agent.
+CLI interface for the IT Service Desk Agent.
 Provides interactive command-line interface for incident triage.
 """
 
@@ -19,7 +19,7 @@ from agent.core import IncidentTriageAgent
 def print_header():
     """Print CLI header."""
     print("\n" + "=" * 70)
-    print("  INCIDENT TRIAGE AGENT")
+    print("  IT SERVICE DESK AGENT")
     print("  Autonomous IT incident classification and response recommendation")
     print("=" * 70 + "\n")
 
@@ -219,7 +219,7 @@ def batch_mode(incident_file: str, output_dir: Optional[str] = None):
 def main():
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
-        description="Incident Triage Agent - Autonomous IT incident classification and response"
+        description="IT Service Desk Agent - Autonomous IT incident classification and response"
     )
 
     parser.add_argument(

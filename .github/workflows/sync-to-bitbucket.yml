@@ -18,6 +18,6 @@ jobs:
           BITBUCKET_USERNAME: vn6295337
           BITBUCKET_APP_PASSWORD: ${{ secrets.BITBUCKET_APP_PASSWORD }}
         run: |
-          git remote add bitbucket https://${BITBUCKET_USERNAME}:${BITBUCKET_APP_PASSWORD}@bitbucket.org/ai_portfolio/poc-agent-function-calling.git || true
+          git remote add bitbucket https://${BITBUCKET_USERNAME}:${BITBUCKET_APP_PASSWORD}@bitbucket.org/ai_portfolio/IT-service-desk-agent.git || true
           git push bitbucket --all --force
           git push bitbucket --tags --force

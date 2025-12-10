@@ -1,5 +1,5 @@
 """
-Streamlit UI for Incident Triage Agent.
+Streamlit UI for IT Service Desk Agent.
 Provides web-based interface for incident triage.
 """
 
@@ -123,7 +123,7 @@ def render_triage_result(result: dict):
 def main():
     """Main Streamlit app."""
     st.set_page_config(
-        page_title="Incident Triage Agent",
+        page_title="IT Service Desk Agent",
         page_icon="🚨",
         layout="wide"
     )
@@ -131,7 +131,7 @@ def main():
     init_session_state()
 
     # Header
-    st.title("🚨 Incident Triage Agent")
+    st.title("🚨 IT Service Desk Agent")
     st.markdown("Autonomous IT incident classification and response recommendation using LLM function calling")
 
     st.divider()
