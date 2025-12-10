@@ -5,10 +5,10 @@
 
 **An intelligent system designed to automate and accelerate the end-to-end incident management lifecycle, moving beyond mere triage to provide autonomous investigation and remediation support.**
 
-## 🎬 Quick Look
+## ✨ Quick Look
 
-- **Live Demo**: [https://service-desk-agent.lovable.app](https://service-desk-agent.lovable.app)
-- **Video Demo**: [service_desk_demo.mp4](https://github.com/vn6295337/IT-service-desk-agent/issues/1#issue-3714616144) (30-second walkthrough)
+- **Self-Service Demo**: [https://service-desk-agent.lovable.app](https://service-desk-agent.lovable.app)
+- **Product Video Demo**: [service_desk_demo.mp4](https://github.com/vn6295337/IT-service-desk-agent/issues/1#issue-3714616144) (30-second walkthrough)
 
 ---
 
@@ -297,11 +297,4 @@ cat triage_result_*.json | jq '.execution_log'
 
 MIT License - see [LICENSE](https://opensource.org/licenses/MIT) file for details.
 
----
-
-## ✨ Links
-
-- **Self-Service Demo**: [https://service-desk-agent.lovable.app](https://service-desk-agent.lovable.app)
-- **GitHub Repo**: [https://github.com/vn6295337/IT-service-desk-agent](https://github.com/vn6295337/IT-service-desk-agent)
-- **Product Video Demo**: [service_desk_demo.mp4](demos/service_desk_demo.mp4)
 ---
