@@ -12,7 +12,7 @@ An **autonomous IT incident triage agent** that uses LLM function calling to ext
 ## 🎬 Demo
 
 - **Live Demo**: [https://service-desk-agent.lovable.app](https://service-desk-agent.lovable.app)
-- **Video Demo**: [service_desk_demo.mp4](demos/service_desk_demo.mp4) (30-second walkthrough)
+- **Video Demo**: [service_desk_demo.mp4](https://github.com/vn6295337/poc-agent-function-calling/issues/1#issue-3714616144) (30-second walkthrough)
 
 The live demo simulates an IT service desk agent's dashboard with autonomous incident triage, multi-provider failover, and ITSM integration.
 
